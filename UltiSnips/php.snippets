@@ -1,0 +1,23 @@
+snippet testcase "template for PHPUnit test case"
+<?php
+declare(strict_types=1);
+
+use PHPUnit\Framework\TestCase;
+
+final class ${1:Classname} extends TestCase
+{
+	public function setUp()
+	{
+		echo $this->getName() . "\n";
+	}
+
+	$0
+}
+endsnippet
+
+snippet pubf "public function for unit testing"
+public function test_$1()
+{
+	$this->assertEquals($0)
+}
+endsnippet
