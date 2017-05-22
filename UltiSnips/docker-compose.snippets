@@ -1,166 +1,362 @@
-snippet ve
+snippet ve "version"
 	version: ${1:2}
-snippet volumes
+	$0
+endsnippet
+
+snippet volumes "volumes"
 	volumes:
 		- ${1:value}
-snippet volume_
+	$0
+endsnippet
+
+snippet volume_ "volume driver"
 	volume_driver: ${1:driver}
-snippet volumes_
+	$0
+endsnippet
+
+snippet volumes_ "volume from"
 	volumes_from:
 		- ${1:name}
-snippet exter
+	$0
+endsnippet
+
+snippet exter "external"
 	external: ${1:boolean}
-snippet ser
+	$0
+endsnippet
+
+snippet ser "services"
 	services:
 		${1:name}
-snippet bu
+	$0
+endsnippet
+
+snippet bu "build"
 	build:
 		${1:value}
-snippet conte
+	$0
+endsnippet
+
+snippet conte "context"
 	context: ${1:dir}
-snippet com
+	$0
+endsnippet
+
+snippet com "command"
 	command: ${1:command}
-snippet dep
+	$0
+endsnippet
+
+snippet dep "depends on "
 	depends_on:
 		${1:value}
-snippet env
+	$0
+endsnippet
+
+snippet env "env variable"
 	environment:
 		${1:name}: ${2:value}
-snippet doc
+	$0
+endsnippet
+
+snippet doc "dockerfile "
 	dockerfile: ${1:file}
-snippet ar
+	$0
+endsnippet
+
+snippet ar "arguments"
 	args:
 		${1:name}: ${2:value}
-snippet cap_a
+	$0
+endsnippet
+
+snippet cap_a "cap_add"
 	cap_add:
 		- ${1:value}
-snippet cap_d
+	$0
+endsnippet
+
+snippet cap_d "cap_drop"
 	cap_drop:
 		- ${1:value}
-snippet cgr
+	$0
+endsnippet
+
+snippet cgr "cgroup_parent"
 	cgroup_parent: ${1:cgroup}
-snippet conta
+	$0
+endsnippet
+
+snippet conta "container's name"
 	container_name: ${1:name}
-snippet dev
+	$0
+endsnippet
+
+snippet dev "devices"
 	devices:
 		- ${1:value}
-snippet dn
+	$0
+endsnippet
+
+snippet dn "dns"
 	dns:
 		- ${1:ip}
-snippet dns_
+	$0
+endsnippet
+
+snippet dns_ "dns search"
 	dns_search:
 		- ${1:ip}
-snippet tm
+	$0
+endsnippet
+
+snippet tm "tmpfs"
 	tmpfs:
 		- ${1:dir}
-snippet ent
+	$0
+endsnippet
+snippet ent "entrypoint"
 	entrypoint: ${1:command}
-snippet env_
+	$0
+endsnippet
+
+snippet env_ "environment file"
 	env_file:
 		- ${1:file}
-snippet exp
+	$0
+endsnippet
+
+snippet exp "expose ports"
 	expose:
 		- ${1:port}
-snippet exten
+		$0
+endsnippet
+
+snippet exten "extends"
 	extends:
 		file: ${1:file}
 		service: ${2:name}
-snippet extr
+	$0
+endsnippet
+
+snippet extr "extra hosts"
 	extra_hosts:
 		- ${1:host}:${2:ip}
-snippet gr
+	$0
+endsnippet
+
+snippet gr "group add"
 	group_add:
 		- ${1:name}
-snippet im
+	$0
+endsnippet
+
+snippet im "image"
 	image: ${1:image}
-snippet la
+	$0
+endsnippet
+
+snippet la "labels"
 	labels:
 		${1:dns}: ${2:label}
-snippet links
+	$0
+endsnippet
+
+snippet links "links"
 	links:
 		- ${1:name}
-snippet logg
+	$0
+endsnippet
+
+snippet logg "logging driver and options"
 	logging:
 		driver: ${1:driver}
 		options:
 			${2:value}
-snippet log_d
+	$0
+endsnippet
+
+snippet log_d "log driver"
 	log_driver: ${1:driver}
-snippet log_o
+	$0
+endsnippet
+
+snippet log_o "log options"
 	log_opt:
 		${1:value}
-snippet net
+	$0
+endsnippet
+
+snippet net "net"
 	net: ${1:value}
-snippet network_
+	$0
+endsnippet
+
+snippet network_ "net modes"
 	network_mode: ${1:value}
-snippet networks
+	$0
+endsnippet
+
+snippet networks "networks"
 	networks:
 		- ${1:value}
-snippet al
+	$0
+endsnippet
+
+snippet al "networks"
 	networks:
 		- ${1:name}
-snippet ipv4
+	$0
+endsnippet
+
+snippet ipv4 "ipv4 addr"
 	ipv4_address: ${1:ip}
-snippet ipv6
+	$0
+endsnippet
+
+snippet ipv6 "ipv6 addr"
 	ipv6_address: ${1:ip}
-snippet link_
+	$0
+endsnippet
+
+snippet link_ "link local ips"
 	link_local_ips:
 		- ${1:ip}
-snippet pi
+	$0
+endsnippet
+
+snippet pi "pid"
 	pid: ${1:host}
-snippet po
+	$0
+endsnippet
+
+snippet po "ports"
 	ports:
 		- ${1:value}
-snippet sec
+	$0
+endsnippet
+
+snippet sec "security opts"
 	security_opt:
 		- ${1:value}
-snippet sto
+	$0
+endsnippet
+
+snippet sto "stop signal"
 	stop_signal: ${1:signal}
-snippet ul
+	$0
+endsnippet
+
+snippet ul "ulimits"
 	ulimits:
 		${1:value}
-snippet cpu_s
+	$0
+endsnippet
+
+snippet cpu_s "cpu shares"
 	cpu_shares: ${1:value}
-snippet cpu_q
+	$0
+endsnippet
+
+snippet cpu_q "cpu quota"
 	cpu_quota: ${1:value}
-snippet cpus
+	$0
+endsnippet
+
+snippet cpus "cpuset"
 	cpuset: ${1:value}
-snippet dom
+	$0
+endsnippet
+
+snippet dom "domain name"
 	domainname: ${1:name}
-snippet ho
+	$0
+endsnippet
+
+snippet ho "hostname"
 	hostname: ${1:name}
-snippet ipc
+	$0
+endsnippet
+
+snippet ipc "ipc"
 	ipc: ${1:host}
-snippet mem_
+	$0
+endsnippet
+
+snippet mem_ "max mem"
 	mem_limit: ${1:value}
-snippet mems
+	$0
+endsnippet
+
+snippet mems "max memswap"
 	memswap_limit: ${1:value}
-snippet pr
+	$0
+endsnippet
+
+snippet pr "run privileged"
 	privileged: ${1:boolean}
-snippet oom
+	$0
+endsnippet
+
+snippet oom "oom score adj"
 	oom_score_adj: ${1:value}
-snippet res
+	$0
+endsnippet
+
+snippet res "restart"
 	restart: ${1:value}
-snippet us
+	$0
+endsnippet
+
+snippet us "user"
 	user: ${1:value}
-snippet wo
+	$0
+endsnippet
+
+snippet wo "working directory"
 	working_dir: ${1:dir}
-snippet rea
+	$0
+endsnippet
+
+snippet rea "read only"
 	read_only: ${1:boolean}
-snippet sh
+	$0
+endsnippet
+
+snippet sh "shm size"
 	shm_size: ${1:value}
-snippet std
+	$0
+endsnippet
+
+snippet std "Stdin open"
 	stdin_open: ${1:boolean}
-snippet tt
+	$0
+endsnippet
+
+snippet tt "tty"
 	tty: ${1:boolean}
-snippet driver
+	$0
+endsnippet
+
+snippet driver "driver"
 	driver: ${1:value}
-snippet driver_
+	$0
+endsnippet
+
+snippet driver_ "Driver options"
 	driver_opts:
 		${1:key}: ${2:value}
-snippet ipa
+	$0
+endsnippet
+
+snippet ipa "ipam"
 	ipam:
 		${1:value}
-snippet hc
+	$0
+endsnippet
+
+snippet hc "healthcheck"
 	healthcheck:
 		test: ${1:command}
+	$0
+endsnippet
